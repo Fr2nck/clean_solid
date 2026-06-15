@@ -1,18 +1,18 @@
 (() => {
 
     // función para obtener información de una película por Id
-    function getAllMovies( movieId: string ) {
-        console.log({ movieId });
+    function getMovieById( Id: string ) {
+        console.log({ Id });
     }
 
     // función para obtener información de los actores de una película - Actors o Cast // id = movieId getMovieCast
-    function getAllMovieActors( id: string ) {
+    function getMovieCastById( id: string ) {
         console.log({ id });
     }
 
     // funcion para obtener el bio del actor por el id
-    function getUsuario( ActorId: string ) {
-        console.log({ ActorId });
+    function getActorBioById( Id: string ) {
+        console.log({ Id });
     }
     
     // Crear una película
