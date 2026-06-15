@@ -1,28 +1,29 @@
 (() => {
+
     // Resolver sin la triple condicional dentro del if
     // includes? arrays?
     function isRedFruit( fruit: string ): boolean {
-        
-        if ( fruit === 'manzana' || fruit === 'cereza' || fruit === 'ciruela' ) {
-            return true;
-        } else {
-            return false;
-        }
+            const redFruits = ['manzana', 'cereza', 'ciruela'];
+            return redFruits.includes(fruit);
     }
 
     // Simplificar esta función
     // switch? Object literal? validar posibles colores
     function getFruitsByColor( color: string ): string[] {
+            // 1. Definimos nuestro objeto literal (Diccionario)
+            const fruitsByColor: Record<string, string[]> = {
+                red:    ['manzana', 'fresa'],
+                yellow: ['piña', 'banana'],
+                purple: ['moras', 'uvas']
+            };
 
-        if ( color === 'red' ) {
-            return ['manzana','fresa'];
-        } else if ( color === 'yellow') {
-            return ['piña','banana'];
-        } else if ( color === 'purple') {
-            return ['moras','uvas']
-        } else {
-            throw Error('the color must be: red, yellow, purple');
-        }
+            // 2. Cláusula de guarda: si el color no existe en el objeto, lanzamos el error
+            if ( !fruitsByColor[color] ) {
+                throw Error('the color must be: red, yellow, purple');
+            }
+
+            // 3. Retorno directo
+            return fruitsByColor[color];
     }
 
     // Simplificar esta función
