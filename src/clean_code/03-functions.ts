@@ -26,8 +26,7 @@
         console.log({ title, description, rating, cast });
     }
 
-    // Crea un nuevo actor
-    
+    // Crea un nuevo actor   
 
     function createActor( fullName: string, birthdate: Date ): boolean {
         
