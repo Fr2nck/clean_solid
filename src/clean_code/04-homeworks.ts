@@ -13,20 +13,32 @@
 
     function getFruitsByColor( color: string ): string[] {
 
-            // 1. Object literal para mapear colores a frutas
-            const fruitsByColor: Record<string, string[]> = {
-                red:    ['manzana', 'fresa'],
-                yellow: ['piña', 'banana'],
-                purple: ['moras', 'uvas']
-            };
+        // 1. Object literal para mapear colores a frutas
+        const fruitsByColor: Record<string, string[]> = {
+            red:    ['manzana', 'fresa'],
+            yellow: ['piña', 'banana'],
+            purple: ['moras', 'uvas']
+        };
 
-            // 2. Validar que el color exista en el object literal
-            if ( !fruitsByColor[color] ) {
+        // 2. Validar que el color exista en el object literal
+        if ( !fruitsByColor[color] ) {
+            throw Error('the color must be: red, yellow, purple');
+        }
+
+        // 3. Retornar las frutas correspondientes al color
+        return fruitsByColor[color];
+            
+        /*
+        switch ( color ) {
+            case 'red':
+                return ['manzana', 'fresa'];
+            case 'yellow':
+                return ['piña', 'banana'];
+            case 'purple':
+                return ['moras', 'uvas'];
+            default:
                 throw Error('the color must be: red, yellow, purple');
-            }
-
-            // 3. Retornar las frutas correspondientes al color
-            return fruitsByColor[color];
+        }*/
     }
 
     // Simplificar esta función
